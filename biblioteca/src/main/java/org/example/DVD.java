@@ -16,7 +16,7 @@ public class DVD extends ItemBiblioteca{
         } else{
             multa = 7;
             int diasAposAtraso = diasAtraso - 7;
-            multa += (diasAposAtraso * 2);
+            multa += (diasAposAtraso * 2); // Bem barato KkKkKkK
             return multa;
         }
     }

@@ -8,7 +8,6 @@ public class Revista extends ItemBiblioteca{
 
     @Override
     public double calcularMulta(int diasAtraso) {
-        System.out.println("Sem Multas");
         return 0;
     }
 }

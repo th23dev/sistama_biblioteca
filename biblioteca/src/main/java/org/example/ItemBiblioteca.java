@@ -1,20 +1,20 @@
 package org.example;
 
 public class ItemBiblioteca {
-    protected static int id = 0;
+    private static int id = 0;
 
-    protected String codigo;
-    protected String titulo;
-    protected int anoPublicacao;
-    protected boolean disponivel;
+    private String codigo;
+    private String titulo;
+    private int anoPublicacao;
+    private boolean disponivel;
 
     public ItemBiblioteca( String titulo, int anoPublicacao) {
         id++;
-        if(id < 10){
+        if(id < 10 && id > 0){
             this.codigo = "LIB-00" + id;
         }else if(id < 100){
             this.codigo = "LIB-0" + id;
-        }else if(id < 1000){
+        }else if(id > 99){
             this.codigo = "LIB-" + id;
         }
 
@@ -23,7 +23,7 @@ public class ItemBiblioteca {
         if(anoPublicacao > 1500 && anoPublicacao <= 2026){
             this.anoPublicacao = anoPublicacao;
         } else {
-            System.out.println("Ano invalido.");
+            System.out.println("Ano invalido");
         }
         this.disponivel = true;
     }
@@ -32,9 +32,6 @@ public class ItemBiblioteca {
         return codigo;
     }
 
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
 
     public String getTitulo() {
         return titulo;
@@ -60,10 +57,10 @@ public class ItemBiblioteca {
     public boolean emprestar(){
         if (disponivel){
             disponivel = false;
-            System.out.println("Livro emprestado.");
+            System.out.println("Item emprestado.");
             return true;
         }else{
-            System.out.println("Livro Indisponivel.");
+            System.out.println("Item Indisponivel.");
             return false;
         }
     }
