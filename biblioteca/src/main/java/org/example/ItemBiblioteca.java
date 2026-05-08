@@ -58,10 +58,10 @@ public class ItemBiblioteca {
     public boolean emprestar(){
         if (disponivel){
             disponivel = false;
-            System.out.println(titulo + " emprestado.");
+            System.out.println(titulo + " foi emprestado.");
             return true;
         }else{
-            System.out.println(titulo + " Indisponivel.");
+            System.out.println("indisponivel.");
             return false;
         }
     }

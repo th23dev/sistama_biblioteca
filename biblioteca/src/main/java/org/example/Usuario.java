@@ -23,7 +23,7 @@ public class Usuario {
                 return false;
             }
         }else{
-            System.out.println(item.getTitulo() + " indisponivel.");
+            System.out.println(item.getTitulo() + " esta indisponivel.");
             return false;
         }
     }
@@ -31,7 +31,7 @@ public class Usuario {
 
     public void listarEmprestimos() {
         for (ItemBiblioteca item : itens){
-            System.out.println(item.getTitulo());
+            System.out.println(item.getCodigo() + " - " + item.getTitulo());
         }
     }
 
