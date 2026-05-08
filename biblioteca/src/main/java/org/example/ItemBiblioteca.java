@@ -24,6 +24,7 @@ public class ItemBiblioteca {
             this.anoPublicacao = anoPublicacao;
         } else {
             System.out.println("Ano invalido");
+            this.anoPublicacao = 2026;
         }
         this.disponivel = true;
     }
@@ -57,10 +58,10 @@ public class ItemBiblioteca {
     public boolean emprestar(){
         if (disponivel){
             disponivel = false;
-            System.out.println("Item emprestado.");
+            System.out.println(titulo + " emprestado.");
             return true;
         }else{
-            System.out.println("Item Indisponivel.");
+            System.out.println(titulo + " Indisponivel.");
             return false;
         }
     }

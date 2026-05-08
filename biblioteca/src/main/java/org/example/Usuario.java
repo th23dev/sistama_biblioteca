@@ -19,17 +19,17 @@ public class Usuario {
                 itens.add(item);
                 return item.emprestar();
             }else{
-                System.out.println("Voce pode emprestar apenas 3 itens.");
+                System.out.println("Voce atingiu o limite de 3 emprestimos.");
                 return false;
             }
         }else{
-            System.out.println("Item indisponivel");
+            System.out.println(item.getTitulo() + " indisponivel.");
             return false;
         }
     }
 
 
-    public void verItens() {
+    public void listarEmprestimos() {
         for (ItemBiblioteca item : itens){
             System.out.println(item.getTitulo());
         }
@@ -43,7 +43,7 @@ public class Usuario {
                 return item.calcularMulta(diasAtraso);
             }
         }
-        System.out.println("Deu errado patrão");
+        System.out.println("Falha ao devolver.");
         return 0;
     }
 
