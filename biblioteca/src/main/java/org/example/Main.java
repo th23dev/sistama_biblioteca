@@ -9,10 +9,9 @@ public class Main {
         DVD formaturaAllan = new DVD("Formatura do Allan", 1970);
         DVD formaturaTassio = new DVD("Formatura do Tassio", 2003);
 
-        Revista artigoTassio = new Revista("Arquitetura com Suporte a Predicao de QoE e Mobilidade para Aplicacoes de Vídeo em Redes Sem Fio Heterogeneas", 2012);
+        Revista artigoTassio = new Revista("Arquitetura com Suporte a Predicao de QoE e Mobilidade para Aplicacoes de Video em Redes Sem Fio Heterogeneas", 2012);
 
 
-        // ----------------- Cenarios -----------------
         // Cenário 1 – Empréstimo normal
         System.out.println("\nCenario 1: Emprestimo normal\n");
         Usuario allan = new Usuario("Allan Veras","000.000.002-00", "9102404033");
@@ -22,7 +21,7 @@ public class Main {
         }
 
         // Cenário 2 – Tentativa de pegar item indisponível
-        System.out.println("\nCenário 2: Tentativa de pegar item indisponivel\n");
+        System.out.println("\nCenario 2: Tentativa de pegar item indisponivel\n");
         Usuario tassio = new Usuario("Tassio Carvalho","000.000.120-00", "9102404033");
         tassio.pegarEmprestado(tccAllan);
 
